@@ -1,0 +1,7 @@
+/.env
+/.git/
+/.next/
+/log/
+/next-env.d.ts
+/node_modules/
+/tsconfig.tsbuildinfo
