@@ -1,4 +1,4 @@
-FROM oven/bun:1.1.45
+FROM oven/bun:1.2.2
 ARG COOKIE_SECRET
 ENV COOKIE_SECRET=$COOKIE_SECRET
 ARG DATABASE_URL
@@ -8,7 +8,7 @@ ENV MIGRATIONS_DIR=$MIGRATIONS_DIR
 ARG REDIS_URL
 ENV REDIS_URL=$REDIS_URL
 WORKDIR /usr/src/app
-COPY bun.lockb package.json ./
+COPY bun.lock package.json ./
 RUN bun install
 COPY . .
 RUN bun run build
