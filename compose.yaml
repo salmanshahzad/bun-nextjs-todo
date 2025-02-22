@@ -11,5 +11,6 @@ services:
             PORT: "$PORT"
         ports:
             - "$PORT:$PORT"
+        restart: "always"
         volumes:
             - "./log:/usr/src/app/log"
